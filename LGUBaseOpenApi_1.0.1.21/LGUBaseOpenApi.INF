@@ -1,0 +1,64 @@
+
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+
+[DefaultInstall]
+CopyFiles=BPFiles, inffile
+AddReg=BP.AddReg
+RegisterOCXs=RegisterOCXSection
+
+[DefaultUninstall]
+cleanup=1
+Delfiles=BPFiles
+delreg=BP.DelReg
+UnRegisterOCXs=UnRegisterOCXSection
+
+[strings]
+productname="LGUBaseOpenApi"
+DefaultName = "LGUBaseOpenApi"
+ComponentID = "LGUBaseOpenApi"
+VersionNumber = "1,0,1,21"
+FileVersion = "1,0,1,21"
+RegisterServer = "yes"
+;LocaleID = "KR"
+
+[RegisterOCXSection]
+%16422%\LGUBaseOpenApi\LGUBaseOpenApi.ocx
+
+[UnRegisterOCXSection]
+%16422%\LGUBaseOpenApi\LGUBaseOpenApi.ocx
+
+[BP.AddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"QuietDisplayName",,"%ProductName%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"QuietUninstallString",,"RunDll32 advpack.dll,LaunchINFSection %17%\LGUBaseOpenApi.inf,DefaultUninstall,5"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"RequiresIESysFile",,"4.70.0.1155"
+
+; 9/10/98  smp  added key for win98 uninstall from control panel...
+HKLM, "Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\LGUBaseOpenApi","Installed",,1
+
+[BP.DelReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"QuietDisplayName",,"%ProductName%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"QuietUninstallString",,"RunDll32 advpack.dll,LaunchINFSection %17%\LGUBaseOpenApi.inf,DefaultUninstall,5"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\LGUBaseOpenApi,"RequiresIESysFile",,"4.70.0.1155"
+
+; 9/10/98  smp  added key for win98 uninstall from control panel...
+HKLM, "Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\LGUBaseOpenApi","Installed",,0
+
+[SourceDisksNames]
+1="LGUBaseOpenApi","LGUBaseOpenApi.cab",1
+
+[SourceDisksFiles]
+LGUBaseOpenApi.ocx=1
+
+
+[BPFiles]
+LGUBaseOpenApi.ocx,,,33
+
+
+[inffile]
+LGUBaseOpenApi.inf,,,33
+
+[DestinationDirs]
+BPFiles=16422, LGUBaseOpenApi
+inffile=17
