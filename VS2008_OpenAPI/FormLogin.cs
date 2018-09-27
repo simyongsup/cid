@@ -323,6 +323,7 @@ namespace VS2008_OpenAPI
                             //MessageBox.Show("type ="+ ptype  + "  callcenter_idx="+ callcenter_idx);
                             url = "https://daemuri.net/corp/getDn.do?ip=" + GetLocalIP() + "&callcenter_idx=" + callcenter_idx + "&ptype=" + ptype;
                             //url = "http://127.0.0.1:8080/corp/getDn.do?ip=" + GetLocalIP() + "&callcenter_idx=" + callcenter_idx+"&ptype="+ptype;
+                            //
 
 
                             try
